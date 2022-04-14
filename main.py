@@ -2,7 +2,7 @@ import pygame
 pygame.init()
 
 window = pygame.display.set_mode((1200, 400))
-trace = pygame.image.load("track5.png")
+trace = pygame.image.load("track6.png")
 car = pygame.image.load("car.png")
 car = pygame.transform.scale(car, (30, 60))
 car_x = 153
@@ -28,7 +28,7 @@ while drive:
     up_px = window.get_at((cam_x, cam_y - focal_distance))[0]
     down_px = window.get_at((cam_x, cam_y + focal_distance))[0]
     right_px = window.get_at((cam_x + focal_distance, cam_y))[0]
-    print(up_px, right_px, down_px)
+    # print(up_px, right_px, down_px)
 
     # change car direction
     if direction == "up" and up_px != 255 and right_px == 255:
