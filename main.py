@@ -28,8 +28,6 @@ while drive:
     up_px = window.get_at((cam_x, cam_y - focal_distance))[0]
     down_px = window.get_at((cam_x, cam_y + focal_distance))[0]
     right_px = window.get_at((cam_x + focal_distance, cam_y))[0]
-    # print(up_px, right_px, down_px)
-    print(up_px)
 
     # change car direction
     if direction == "up" and up_px != 255 and right_px == 255:
@@ -53,7 +51,6 @@ while drive:
         car = pygame.transform.rotate(car, 90)
         car_x = car_x + 30
         cam_x_offset = 0
-
 
     # drive
     if direction == "up" and up_px == 255:
